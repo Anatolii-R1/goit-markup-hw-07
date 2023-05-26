@@ -51,7 +51,7 @@ body {
 /* Normalize vs Reset */
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -360,10 +360,57 @@ p {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/Hero/hero.jpeg);
+    url(..images/Hero/Dark-bg_mob@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@madia (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(..images/Hero/Dark-bg_mob@2x.jpg);
+  }
+}
+@media only screen and (min-width: 481px) {
+  .hero-section {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(..images/Hero/Dark-bg_tab@1x.jpg);
+  }
+
+  @madia (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+      ),
+      url(..images/Hero/Dark-bg_tab@2x.jpg);
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+    .hero-section {
+      background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+      ),
+      url(..images/Hero/Dark-bg_desk@1x.jpg);
+  }
+  @madia (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-section {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+      ),
+    url(..images/Hero/Dark-bg_desk@2x.jpg);
+    }
+  }
 }
 @media only screen and (min-width: 768px)  {
   .hero-section {
@@ -735,6 +782,8 @@ p {
   .customers-list {
     --indent-horizontal: 72px;
     --items: 6
+    display: flex;
+  flex-wrap: nowrap;   
   }
 }
 
@@ -776,17 +825,64 @@ p {
 
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
+}
+@media only screen and (min-width: 768px) {
+  .footer {
+  padding: 96px 0;
+}
+}
+@media only screen and (min-width: 1158px) {
+  .footer {
+  padding: 96px 0;
+}
 }
 .footer-container {
   display: flex;
   align-items: baseline;
+  flex-wrap: wrap;
+  margin-left: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-container {
+  margin-left: 108px;
+}
+}
+@media only screen and (min-width: 1158px) {
+  .footer-container {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+}
 }
 .social-container {
 }
+@media only screen and (min-width: 768px) {
+  .social-container {
+  margin-bottom: 104px;
+}
+}
+@media only screen and (min-width: 1158px) {
+  .social-container {
+   margin-left: 120px;
+}
+}
+@media only screen and (max-width: 768px) {
+  .social-container {
+  margin-bottom: 72px;
+}
+}
 .footer-logo-container {
   margin-right: 120px;
+  margin-bottom: 72px;
 }
+@media only screen and (min-width: 768px) {
+  .footer-logo-container {
+    margin-right: 24px;
+  }
+}
+
 .social-media {
   font-weight: 500;
   font-size: 16px;
@@ -794,6 +890,12 @@ p {
   letter-spacing: 0.02em;
   color: var(--color-white);
   margin-bottom: 16px;
+}
+@media only screen and (max-width: 768px) {
+  .social-media {
+    display: flex;
+    justify-content: center;
+  }
 }
 .socials-footer {
   display: flex;
@@ -830,7 +932,12 @@ p {
   display: flex;
   margin-bottom: 16px;
 }
-
+@media only screen and (max-width: 768px) {
+  .footer-link {
+    display: flex;
+    justify-content: center;
+  }
+}
 .logo-web-studio {
   font-family: Raleway, sans-serif;
   font-style: normal;
@@ -858,7 +965,17 @@ p {
 
 /*Email window */
 .email-container {
+  
+}
+@media only screen and (min-width: 768px) {
+  .email-container {
+  margin-left: 0;
+}
+}
+@media only screen and (min-width: 1158px) {
+  .email-container {
   margin-left: auto;
+}
 }
 .email-form {
 }
@@ -873,6 +990,13 @@ p {
   letter-spacing: 0.02em;
   color: var(--color-white);
 }
+@media only screen and (max-width: 768px) {
+  .email-form-tag {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .email-form-input {
   font-size: 12px;
   font-family: 'Roboto';
