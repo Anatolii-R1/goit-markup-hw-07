@@ -99,18 +99,23 @@ p {
   /* Basic style */
   min-width: 320px;
   
-  padding: 0 16px
+  padding: 0 16px;
   margin: 0 auto;
   
   outline: 2px solid red;
   outline-offset: -2px;
 }
 
-
+/* Tablet screen >=428*/
+@media only screen and (min-width: 428px) {
+  .container {
+    max-width: 428px;
+  }
+}
 /* Tablet screen >=768*/
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
 }
 /* Desktop screen >=1158*/
@@ -352,6 +357,7 @@ p {
 /* Section-Hero */
 
 .hero-section {
+  max-width: 428px;
   height: 432px;
   margin-left: auto;
   margin-right: auto;
@@ -360,7 +366,7 @@ p {
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
-    ), url(../images/Hero/Dark-bg_mob@1x.jpg);
+    ), url(../images/Hero/Dark-bg_mob@1x.jpg), url(../images/Hero/Dark-bg_mob@2x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -374,7 +380,7 @@ p {
     url(../images/Hero/Dark-bg_mob@2x.jpg);
   }
 }
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 429px) {
   .hero-section {
     background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -489,8 +495,15 @@ p {
 
 
 .advantage-section {
-  padding: 120px 0;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
+@media only screen and (max-width: 1157px)  {
+  .advantage-section {
+    padding-top: 96px;
+  padding-bottom: 96px;
+  }
+} 
 
 .main-advantage-section {
 }
@@ -539,7 +552,7 @@ p {
   border-radius: 4px;
   margin-bottom: 8px;
 }
-@media only screen and (min-width: 428px) and (max-width: 1157px) {
+@media only screen and (max-width: 1157px) {
   .feature-icon {
     display: none;
   }
@@ -556,7 +569,7 @@ p {
   color: #2e2f42;
   margin-bottom: 8px;
 }
-@media only screen and (min-width: 428px) and (max-width: 1157px){
+@media only screen and (max-width: 1157px){
   .advantage-list-title {
    
     font-weight: 700;
@@ -1127,9 +1140,11 @@ p {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  width: 408px;
-  height: 584px;
+  width: 95%;
+  max-width: 392px;
+  
   padding: 72px 24px 24px;
+  overflow: scroll;
 
   background-color: #fcfcfc;
   border-radius: 4px;
@@ -1558,8 +1573,14 @@ p {
 }
 .mobile-socials {
   justify-content: flex-start;
-  gap: 54px;
+  gap: 24px;
+}
 
+@media only screen and (min-width: 428px) {
+  .mobile-socials {
+    gap: 54px;
+    justify-content: center;
+  }
 }
 
 /* ------------------------- */
